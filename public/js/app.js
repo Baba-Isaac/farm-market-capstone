@@ -229,7 +229,7 @@ orderForm.addEventListener("submit", async (e) => {
     orderSubmitBtn.disabled = true;
 
     const whatsappNumber = toWhatsAppNumber(data.farmer_phone);
-    const message = `Hello ${data.farmer_name}, I just placed order #${data.id} on Fam Market for ${data.quantity_ordered} ${data.unit}(s) of ${data.crop_name}. My name is ${data.buyer_name}. Please let us arrange delivery or pickup.`;
+    const message = `Hello ${data.farmer_name}, I just placed order #${data.id} on Farm Market for ${data.quantity_ordered} ${data.unit}(s) of ${data.crop_name}. My name is ${data.buyer_name}. Please let us arrange delivery or pickup.`;
     whatsappLink.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     whatsappLink.hidden = false;
     loadListings(); // refresh stock counts

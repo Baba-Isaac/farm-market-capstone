@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fam-market-ng
+    name: farm-market-ng
     runtime: node
     plan: free
     buildCommand: npm install

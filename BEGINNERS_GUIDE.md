@@ -17,7 +17,7 @@ Accept the normal/default installer options. Restart the computer after installi
 1. Extract the downloaded ZIP.
 2. Open VS Code.
 3. Choose **File → Open Folder**.
-4. Select the extracted `fam-market-capstone` folder—not its parent Downloads folder.
+4. Select the extracted `farm-market-capstone` project folder—not its parent Downloads folder.
 5. You should see `server.js`, `package.json`, `public`, `routes` and `database` in the Explorer.
 
 Do not open only `index.html`, and do not use the Live Server extension for this full-stack project. Express serves both the frontend and API.
@@ -65,14 +65,14 @@ Confirm all of these:
 
 ## 6. Put the project on GitHub
 
-Create a free GitHub account if needed, then create a new empty repository named `fam-market-capstone`. Do not add a README or `.gitignore` on GitHub because the project already contains them.
+Create a free GitHub account if needed, then create a new empty repository named `farm-market-capstone`. Do not add a README or `.gitignore` on GitHub because the project already contains them.
 
 In the VS Code terminal, run the commands GitHub displays under **push an existing repository from the command line**. The normal sequence is:
 
 ```bash
 git init
 git add .
-git commit -m "Build Fam Market produce marketplace MVP"
+git commit -m "Build Farm Market produce marketplace MVP"
 git branch -M main
 git remote add origin YOUR_GITHUB_REPOSITORY_URL
 git push -u origin main

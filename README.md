@@ -1,10 +1,10 @@
-# Fam Market — Nigerian Produce Marketplace
+# Farm Market — Nigerian Produce Marketplace
 
 A beginner-friendly full-stack capstone project for the **3MTT Airtel NextGen Programme (Software Development track)**.
 
 ## Problem statement
 
-Many Nigerian farmers lack a simple way to advertise harvested produce and reach buyers directly. Buyers may also struggle to discover what is available, where it is located, and how much it costs. Fam Market provides a lightweight digital marketplace where farmers list produce and buyers search and place orders.
+Many Nigerian farmers lack a simple way to advertise harvested produce and reach buyers directly. Buyers may also struggle to discover what is available, where it is located, and how much it costs. Farm Market provides a lightweight digital marketplace where farmers list produce and buyers search and place orders.
 
 **Tagline:** Fresh from the farm, straight to you.
 
@@ -33,7 +33,7 @@ The project intentionally avoids a frontend build system so that a beginner can 
 ## Project structure
 
 ```text
-fam-market-capstone/
+farm-market-capstone/
 ├── database/
 │   └── db.js
 ├── public/
