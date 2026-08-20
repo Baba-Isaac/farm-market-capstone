@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fam Market — Fresh Produce, Straight From The Farm</title>
+  <meta name="description" content="A marketplace connecting Nigerian farmers directly to buyers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark">🌾</span>
+        <span class="brand-name">Fam Market</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#listings">Browse</a>
+        <a href="#sell">Sell produce</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">A farm-to-buyer marketplace</p>
+      <h1>Fresh from the farm,<br>straight to you.</h1>
+      <p class="hero-sub">
+        Nigerian farmers list what they've harvested. Buyers find it, order it,
+        no middleman markup in between.
+      </p>
+
+      <form id="search-form" class="search-bar" role="search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search yam, tomato, rice, a location..."
+          aria-label="Search produce listings"
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="category-chips" id="category-chips" aria-label="Filter by category">
+        <button class="chip is-active" data-category="">All</button>
+        <button class="chip" data-category="Vegetables">Vegetables</button>
+        <button class="chip" data-category="Fruits">Fruits</button>
+        <button class="chip" data-category="Grains">Grains</button>
+        <button class="chip" data-category="Tubers">Tubers</button>
+        <button class="chip" data-category="Legumes">Legumes</button>
+      </div>
+
+      <div class="stats-bar" id="stats-bar" aria-label="Marketplace statistics">
+        <div><strong id="stat-listings">—</strong><span>produce listings</span></div>
+        <div><strong id="stat-locations">—</strong><span>locations represented</span></div>
+        <div><strong id="stat-units">—</strong><span>units available</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <section id="listings" class="listings-section">
+      <div class="section-heading">
+        <h2>On the market board</h2>
+        <p id="results-count" class="results-count"></p>
+      </div>
+
+      <div id="listings-grid" class="listings-grid" aria-live="polite">
+        <!-- Listing cards injected by app.js -->
+      </div>
+
+      <p id="empty-state" class="empty-state" hidden>
+        Nothing matches that search yet. Try a different crop or location —
+        or be the first to <a href="#sell">list it</a>.
+      </p>
+    </section>
+
+    <section id="sell" class="sell-section">
+      <div class="sell-card">
+        <div class="sell-copy">
+          <p class="eyebrow">For farmers</p>
+          <h2>Got produce ready to sell?</h2>
+          <p>List it in under a minute. Buyers can find and order it right away.</p>
+        </div>
+
+        <form id="listing-form" class="listing-form">
+          <div class="form-row">
+            <label for="crop_name">Produce name</label>
+            <input type="text" id="crop_name" name="crop_name" placeholder="e.g. Fresh Yam Tubers" required />
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="category">Category</label>
+              <select id="category" name="category" required>
+                <option value="" disabled selected>Choose one</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Grains">Grains</option>
+                <option value="Tubers">Tubers</option>
+                <option value="Legumes">Legumes</option>
+              </select>
+            </div>
+            <div>
+              <label for="unit">Unit</label>
+              <input type="text" id="unit" name="unit" placeholder="e.g. basket, bag, tuber" required />
+            </div>
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="price_per_unit">Price per unit (₦)</label>
+              <input type="number" id="price_per_unit" name="price_per_unit" min="1" step="1" required />
+            </div>
+            <div>
+              <label for="quantity_available">Quantity available</label>
+              <input type="number" id="quantity_available" name="quantity_available" min="1" step="1" required />
+            </div>
+          </div>
+
+          <div class="form-row form-row-split">
+            <div>
+              <label for="farmer_name">Your name</label>
+              <input type="text" id="farmer_name" name="farmer_name" placeholder="e.g. Chidi Okafor" required />
+            </div>
+            <div>
+              <label for="location">Location</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Port Harcourt, Rivers" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="farmer_phone">WhatsApp phone number</label>
+            <input type="tel" id="farmer_phone" name="farmer_phone" placeholder="e.g. 08012345678" required />
+          </div>
+
+          <div class="form-row">
+            <label for="description">Description <span class="optional">(optional)</span></label>
+            <textarea id="description" name="description" rows="2" placeholder="Anything buyers should know?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">List my produce</button>
+          <p id="listing-form-message" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Fam Market — a 3MTT Airtel NextGen capstone project.</p>
+    </div>
+  </footer>
+
+  <!-- Order dialog -->
+  <dialog id="order-dialog" class="order-dialog">
+    <form id="order-form" method="dialog">
+      <h3 id="order-dialog-title">Order produce</h3>
+      <p id="order-dialog-sub" class="order-dialog-sub"></p>
+
+      <input type="hidden" id="order_listing_id" name="listing_id" />
+
+      <div class="form-row">
+        <label for="buyer_name">Your name</label>
+        <input type="text" id="buyer_name" name="buyer_name" required />
+      </div>
+
+      <div class="form-row">
+        <label for="buyer_phone">Phone number</label>
+        <input type="tel" id="buyer_phone" name="buyer_phone" placeholder="e.g. 080..." required />
+      </div>
+
+      <div class="form-row">
+        <label for="order_quantity">Quantity <span id="order_unit_hint"></span></label>
+        <input type="number" id="order_quantity" name="quantity_ordered" min="1" step="1" required />
+      </div>
+
+      <p id="order-form-message" class="form-message" role="status"></p>
+      <a id="whatsapp-link" class="btn-whatsapp" href="#" target="_blank" rel="noopener" hidden>
+        Message farmer on WhatsApp
+      </a>
+
+      <div class="dialog-actions">
+        <button type="button" id="order-cancel-btn" class="btn-ghost">Cancel</button>
+        <button type="submit" id="order-submit-btn" class="btn-primary">Place order</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "produce-marketplace",
+  "version": "1.0.0",
+  "description": "A marketplace connecting Nigerian farmers directly to buyers - list produce, search, and place orders.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["3mtt", "capstone", "marketplace", "agriculture"],
+  "author": "Isaac Baba Fedoje",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=20 <25"
+  }
+}

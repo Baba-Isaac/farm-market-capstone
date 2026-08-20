@@ -1,0 +1,8 @@
+node_modules/
+marketplace.db
+marketplace.db-journal
+marketplace.db-wal
+marketplace.db-shm
+.env
+.DS_Store
+npm-debug.log*
